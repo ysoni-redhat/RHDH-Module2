@@ -13,7 +13,8 @@ spec:
   httpManagement:
     port: 8080
   hostname:
-    hostname: REPLACE_ME
+    adminUrl: 'https://keycloak-rhdh-operator.apps.cluster-klj6r.dynamic.redhatworkshops.io'
+    hostname: keycloak-rhdh-operator.apps.cluster-klj6r.dynamic.redhatworkshops.io
   instances: 1
   db:
     vendor: postgres
