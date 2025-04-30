@@ -1,4 +1,3 @@
-
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -10,11 +9,9 @@ metadata:
   annotations:
     operators.operatorframework.io.display-name: Red Hat build of Keycloak Operator
 spec:
-  channel: stable-v26.0
+  channel: stable-v22
   installPlanApproval: Automatic
   name: rhbk-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: rhbk-operator.v26.0.10-opr.1
-...
 
