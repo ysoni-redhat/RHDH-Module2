@@ -18,3 +18,11 @@ data:
       cors:
         origin: https://rhdh.apps.cluster-klj6r.dynamic.redhatworkshops.io
 
+    auth:
+      environment: development
+      providers:
+        keycloak:
+          development:
+            clientId: rhdh
+            clientSecret: developer-hub-secret
+            issuer: https://keycloak-rhdh-operator.apps.cluster-klj6r.dynamic.redhatworkshops.io/realms/rhdh
