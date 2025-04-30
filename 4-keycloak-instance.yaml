@@ -16,3 +16,12 @@ spec:
     adminUrl: 'https://keycloak-rhdh-operator.apps.cluster-klj6r.dynamic.redhatworkshops.io'
     hostname: keycloak-rhdh-operator.apps.cluster-klj6r.dynamic.redhatworkshops.io
   instances: 1
+  db:
+    vendor: postgres
+    host: keycloak-postgres
+    usernameSecret:
+      name: keycloak-db-secret
+      key: username
+    passwordSecret:
+      name: keycloak-db-secret
+      key: password
