@@ -1,0 +1,43 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - rhdh/vars-config.yaml
+  - rhdh/3-Subscription.yaml
+  - rhdh/4-Secret.yaml
+  - rhdh/5-backstage.yaml
+
+configMapGenerator:
+  - name: app-config-rhdh
+    namespace: rhdh-operator
+    files:
+      - rhdh/6-app-config-rhdh.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+replacements:
+  - source:
+      kind: ConfigMap
+      name: rhdh-vars
+      namespace: rhdh-operator
+      fieldPath: data.HOST
+    targets:
+      - select:
+          kind: Backstage
+          name: developer-hub
+        fieldPaths:
+          - spec.application.route.host
+
+  - source:
+      kind: ConfigMap
+      name: rhdh-vars
+      namespace: rhdh-operator
+      fieldPath: data.SUBDOMAIN
+    targets:
+      - select:
+          kind: Backstage
+          name: developer-hub
+        fieldPaths:
+          - spec.application.route.subdomain
+
