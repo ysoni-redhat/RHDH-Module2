@@ -3,7 +3,7 @@ apiVersion: rhdh.redhat.com/v1alpha3
 kind: Backstage
 metadata:
   name: developer-hub
-  namespace: demo-project
+  namespace: rhdh-operator
   labels:
     app.kubernetes.io/name: backstage
 spec:
@@ -23,8 +23,8 @@ spec:
     replicas: 1
     route:
       enabled: true
-      host: ${HOST}
-      subdomain: ${SUBDOMAIN}
+      host: rhdh.apps.cluster-klj6r.dynamic.redhatworkshops.io
+      subdomain: apps.cluster-klj6r.dynamic.redhatworkshops.io
   database:
     enableLocalDb: true
 ...
