@@ -41,7 +41,7 @@ spec:
         baseUrl: "https://rhdh.apps.cluster-klj6r.dynamic.redhatworkshops.io"
         webOrigins:
           - "+"
-        secret: ""  # Leave empty — Keycloak will auto-generate or set it after creation
+        secret: "developer-hub-secret"  # Leave empty — Keycloak will auto-generate or set it after creation
         standardFlowEnabled: true
         implicitFlowEnabled: false
         directAccessGrantsEnabled: false
