@@ -1,0 +1,30 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: rhdh-operator
+
+resources:
+  - keycloak/1-namespace.yaml
+  - keycloak/2-OperatorGroup.yaml
+  - keycloak/3-subscription.yaml
+  - keycloak/4-secret.yaml
+  - keycloak/5-keycloak_instance.yaml
+
+configMapGenerator:
+  - name: keycloak-vars
+    literals:
+      - KEYCLOAK_HOST=keycloak-rhdh-operator.apps.cluster-klj6r.dynamic.redhatworkshops.io
+    behavior: create
+
+replacements:
+  - source:
+      kind: ConfigMap
+      name: keycloak-vars
+      fieldPath: data.KEYCLOAK_HOST
+    targets:
+      - select:
+          kind: Keycloak
+          name: example-keycloak-new
+        fieldPaths:
+          - spec.hostname.hostname
+        options:
+          create: true
