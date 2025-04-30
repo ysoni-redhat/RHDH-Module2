@@ -9,7 +9,7 @@ resources:
 
 configMapGenerator:
   - name: app-config-rhdh
-    namespace: rhdh-operator
+    namespace: demo-project
     files:
       - rhdh/6-app-config-rhdh.yaml
 
@@ -20,7 +20,7 @@ replacements:
   - source:
       kind: ConfigMap
       name: rhdh-vars
-      namespace: rhdh-operator
+      namespace: demo-project
       fieldPath: data.HOST
     targets:
       - select:
@@ -32,7 +32,7 @@ replacements:
   - source:
       kind: ConfigMap
       name: rhdh-vars
-      namespace: rhdh-operator
+      namespace: demo-project
       fieldPath: data.SUBDOMAIN
     targets:
       - select:
