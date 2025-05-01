@@ -56,3 +56,6 @@ data:
                 - resolver: emailMatchingUserEntityProfileEmail
                   dangerouslyAllowSignInWithoutUserInCatalog: true
 
+      locations:
+        - type: url
+          target: https://raw.githubusercontent.com/ysoni-redhat/RHDHSoftwareTemplate/refs/heads/main/catalog-info.yaml
