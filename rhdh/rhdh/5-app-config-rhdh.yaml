@@ -17,6 +17,9 @@ data:
       baseUrl: https://rhdh.apps.cluster-klj6r.dynamic.redhatworkshops.io
       cors:
         origin: https://rhdh.apps.cluster-klj6r.dynamic.redhatworkshops.io
+      reading:
+        allow:
+          - host: raw.githubusercontent.com
 
     auth:
       environment: production
@@ -55,3 +58,7 @@ data:
               resolvers:
                 - resolver: emailMatchingUserEntityProfileEmail
                   dangerouslyAllowSignInWithoutUserInCatalog: true
+      locations:
+        - type: url
+          target: https://raw.githubusercontent.com/ysoni-redhat/RHDHSoftwareTemplate/main/catalog-info.yaml
+
