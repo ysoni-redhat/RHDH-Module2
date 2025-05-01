@@ -60,5 +60,5 @@ data:
                   dangerouslyAllowSignInWithoutUserInCatalog: true
       locations:
         - type: url
-          target: https://raw.githubusercontent.com/ysoni-redhat/RHDHSoftwareTemplate/main/catalog-info.yaml
+          target: https://raw.githubusercontent.com/YogiSoni-lazy/rhdh/refs/heads/main/catalog/catalog-info.yaml
 
