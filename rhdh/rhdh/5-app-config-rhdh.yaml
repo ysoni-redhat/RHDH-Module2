@@ -21,6 +21,12 @@ data:
         allow:
           - host: raw.githubusercontent.com
 
+      # GitHub token support for backend operations (used by scaffolder)
+      integrations:
+        github:
+          - host: github.com
+            token: ${GITHUB_TOKEN}
+
     auth:
       environment: production
       session:
@@ -59,5 +65,9 @@ data:
                 - resolver: emailMatchingUserEntityProfileEmail
                   dangerouslyAllowSignInWithoutUserInCatalog: true
       locations:
-         - type: url
-           target: https://raw.githubusercontent.com/ysoni-redhat/RHDHSoftwareTemplate/refs/heads/main/catalog/catalog-info.yaml                    
+        - type: url
+          target: https://raw.githubusercontent.com/ysoni-redhat/RHDHSoftwareTemplate/refs/heads/main/catalog/catalog-info.yaml
+    scaffolder:
+      defaultAuthor: rhdh-admin
+      github:
+        token: ${GITHUB_TOKEN}
