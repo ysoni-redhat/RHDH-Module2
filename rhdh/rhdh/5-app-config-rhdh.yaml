@@ -5,12 +5,6 @@ metadata:
   name: app-config-rhdh
   namespace: demo-project
 data:
-  dynamic-plugins.yaml: |
-    includes:
-      - dynamic-plugins.default.yaml
-    plugins:
-      - package: './dynamic-plugins/dist/backstage-plugin-scaffolder-backend-module-github-dynamic'
-        disabled: false
   app-config.yaml: |
     app:
       title: Red Hat Developer Hub
