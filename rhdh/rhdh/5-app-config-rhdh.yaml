@@ -5,7 +5,7 @@ metadata:
   name: app-config-rhdh
   namespace: demo-project
 data:
-    dynamic-plugins.yaml: |
+  dynamic-plugins.yaml: |
     includes:
       - dynamic-plugins.default.yaml
     plugins:
