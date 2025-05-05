@@ -13,7 +13,7 @@ data:
     backend:
       auth:
         keys:
-          - secret: "${BACKEND_SECRET}"
+          - secret: N4KQcvTEIi6lAMGB5S0vHvBZdeAhop+J
       baseUrl: https://rhdh.apps.cluster-klj6r.dynamic.redhatworkshops.io
       cors:
         origin: https://rhdh.apps.cluster-klj6r.dynamic.redhatworkshops.io
@@ -25,12 +25,12 @@ data:
       integrations:
         github:
           - host: github.com
-            token: ${GITHUB_TOKEN}
+            token: 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
 
     auth:
       environment: production
       session:
-        secret: "${BACKEND_SECRET}"
+        secret: N4KQcvTEIi6lAMGB5S0vHvBZdeAhop+J
       providers:
         oidc:
           production:
@@ -70,4 +70,4 @@ data:
     scaffolder:
       defaultAuthor: rhdh-admin
       github:
-        token: ${GITHUB_TOKEN}
+        token: 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
