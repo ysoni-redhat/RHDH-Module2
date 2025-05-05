@@ -26,6 +26,10 @@ data:
         github:
           - host: github.com
             token: ${GITHUB_TOKEN}
+    integrations:
+      github:
+        - host: github.com
+          token: ${GITHUB_TOKEN}
     auth:
       environment: production
       session:
