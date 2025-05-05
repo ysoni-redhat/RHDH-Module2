@@ -25,8 +25,7 @@ data:
       integrations:
         github:
           - host: github.com
-            token: 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
-
+            token: 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
     auth:
       environment: production
       session:
@@ -70,4 +69,4 @@ data:
     scaffolder:
       defaultAuthor: rhdh-admin
       github:
-        token: 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
+        token: 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
