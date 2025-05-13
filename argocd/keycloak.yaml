@@ -18,3 +18,8 @@ spec:
       prune: false
     syncOptions:
       - CreateNamespace=true
+  ignoreDifferences:
+    - group: k8s.keycloak.org
+      kind: Keycloak
+      jsonPointers:
+        - /status        
