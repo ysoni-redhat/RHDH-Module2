@@ -10,8 +10,6 @@ spec:
     httpEnabled: true
     httpPort: 8090
     tlsSecret: my-tls-secret
-  httpManagement:
-    port: 8080
   hostname:
     adminUrl: 'https://keycloak-rhdh-operator.apps.cluster-g7q2m.dynamic.redhatworkshops.io'
     hostname: keycloak-rhdh-operator.apps.cluster-g7q2m.dynamic.redhatworkshops.io
